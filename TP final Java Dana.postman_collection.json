@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "6de4972c-ecd3-4b9d-bd14-865c107ff96d",
+		"name": "TP final Java Dana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13757130"
+	},
+	"item": [
+		{
+			"name": "Articulo",
+			"item": [
+				{
+					"name": "GET traer todos los articulos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer articulo por titulo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo?filter=test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer articulo por descripcion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo?filter=test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer articulo por contenido",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo?filter=test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer articulo por nombre completo de autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo?filter=test",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST agregar articulo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test\",\r\n    \"description\": \"testDescrip\",\r\n    \"url\": \"www.test.com\",\r\n    \"urlToImage\": \"www.test.com/imagen\",\r\n    \"published\": true,\r\n    \"publishedAt\": \"2022-08-16\",\r\n    \"content\": \"Esto es un test\",\r\n    \"author\":{ \r\n            \"id\": 2,\r\n            \"firstname\": \"Dana\",\r\n            \"lastname\": \"Erro\",\r\n            \"fullname\": \"Mauri G\",\r\n            \"createdAt\": \"2022-08-18\"\r\n    },\r\n    \"source\":{\r\n            \"id\": 1,\r\n            \"name\": \"Diario Popul\",\r\n            \"code\": \"Diario-Popul\",\r\n            \"createdAt\": \"2022-08-18\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar articulo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test2\",\r\n    \"description\": \"testDescrip2\",\r\n    \"url\": \"www.test2.com\",\r\n    \"urlToImage\": \"www.test2.com/imagen\",\r\n    \"published\": true,\r\n    \"content\": \"Esto es un test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo/modificar?articuloId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "articuloId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE eliminar articulo por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/articulo/eliminar?articuloId=7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"articulo",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "articuloId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autor",
+			"item": [
+				{
+					"name": "GET traer todos los autores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/autor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer autor por nombre completo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/autor?fullname=Mauri",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor"
+							],
+							"query": [
+								{
+									"key": "fullname",
+									"value": "Mauri"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer autor por fecha creacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/autor?date=2022-08-16",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2022-08-16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST agregar autor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"Dana\",\r\n    \"lastname\" : \"Erro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/autor/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar autor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\" : \"mauricio de jesus\",\r\n    \"lastname\" : \"gutierrez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/autor/modificar?autorId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "autorId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE eliminar autor por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/autor/eliminar?autorId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"autor",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "autorId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fuente",
+			"item": [
+				{
+					"name": "GET traer todas las fuentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/fuente",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fuente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET traer fuente por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/fuente?name=La nacion",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fuente"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "La nacion"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST agregar fuente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"clarin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/fuente/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fuente",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT modificar fuente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diario Popul\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/fuente/modificar?fuenteId=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fuente",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "fuenteId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE eliminar fuente por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/fuente/eliminar?fuenteId=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"fuente",
+								"eliminar"
+							],
+							"query": [
+								{
+									"key": "fuenteId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
